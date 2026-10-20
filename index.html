@@ -69,31 +69,26 @@ h1{letter-spacing:-1.2px}
 </style>
 </head>
 <body>
-
 <header class="hero">
 <div class="container">
   <div class="topbar">
     <div class="logo">ZINMATT<span>.</span></div>
-    <div class="pill">11 OCT • 11:00 AM</div>
+    <div class="pill">25 OCT • 11:00 AM IST</div>
   </div>
-
   <div class="hero-grid">
     <div>
       <div class="badge">🔥 FREE LIVE WEBINAR</div>
       <h1>Master <span class="highlight">AI Digital Marketing</span> and Build Your Career</h1>
       <p class="lead">Join India's Practical AI Digital Marketing Training and learn Website Development, Canva, AI Tools, Meta Ads, SEO, Google Analytics, Content Creation &amp; Real Projects.</p>
-
       <div class="countdown" aria-label="Countdown to webinar">
         <div class="time"><strong id="days">00</strong><small>Days</small></div>
         <div class="time"><strong id="hours">00</strong><small>Hours</small></div>
         <div class="time"><strong id="minutes">00</strong><small>Minutes</small></div>
         <div class="time"><strong id="seconds">00</strong><small>Seconds</small></div>
       </div>
-
-      <a class="cta" href="https://chat.whatsapp.com/GLFqb5Qr2FR21pIxnRc3XW" target="_blank" rel="noopener noreferrer">💬 Join WhatsApp Community →</a>
+      <a class="cta" href="https://chat.whatsapp.com/DfQBftCw8WQ3WRGvnNx2sW" target="_blank" rel="noopener noreferrer">💬 Join WhatsApp Community →</a>
       <div class="micro">Join the community to receive the webinar link and updates.</div>
     </div>
-
     <div class="panel">
       <h2>🎯 What You'll Learn</h2>
       <div class="check"><b>✓</b><span>AI Tools &amp; ChatGPT</span></div>
@@ -109,7 +104,6 @@ h1{letter-spacing:-1.2px}
   </div>
 </div>
 </header>
-
 <section class="section">
 <div class="container">
   <div class="section-title">
@@ -124,33 +118,32 @@ h1{letter-spacing:-1.2px}
   </div>
 </div>
 </section>
-
 <section class="section" style="padding-top:10px">
 <div class="container">
   <div class="bottom">
     <h2>Limited Seats Available</h2>
     <p>Join the WhatsApp Community now to receive the Webinar Link and Updates.</p>
-    <a class="cta" href="https://chat.whatsapp.com/GLFqb5Qr2FR21pIxnRc3XW" target="_blank" rel="noopener noreferrer">Join Now on WhatsApp →</a>
+    <a class="cta" href="https://chat.whatsapp.com/DfQBftCw8WQ3WRGvnNx2sW" target="_blank" rel="noopener noreferrer">Join Now on WhatsApp →</a>
   </div>
 </div>
 </section>
-
 <footer>© 2026 Zinmatt • AI Digital Marketing Training</footer>
-
 <script>
-const target = new Date("October 11, 2026 11:00:00").getTime();
-const timer = setInterval(() => {
+const target = new Date("October 25, 2026 11:00:00 GMT+0530").getTime();
+const countdown = document.querySelector(".countdown");
+function updateCountdown() {
   const distance = target - Date.now();
   if (distance <= 0) {
-    clearInterval(timer);
-    document.querySelector(".countdown").innerHTML = "<strong style='grid-column:1/-1;text-align:center;font-size:24px'>Webinar Started!</strong>";
+    countdown.innerHTML = "<strong style='grid-column:1/-1;text-align:center;font-size:24px'>Webinar time has arrived!</strong>";
     return;
   }
   document.getElementById("days").textContent = Math.floor(distance / 86400000);
   document.getElementById("hours").textContent = Math.floor((distance % 86400000) / 3600000);
   document.getElementById("minutes").textContent = Math.floor((distance % 3600000) / 60000);
   document.getElementById("seconds").textContent = Math.floor((distance % 60000) / 1000);
-}, 1000);
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
 </script>
 </body>
 </html>
